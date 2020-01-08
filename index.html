@@ -104,7 +104,7 @@ body {font-family: "Lato", sans-serif}
             <p><input style="margin-bottom:30px"class="MyButton" type="button"  value="WEEKOPDRACHT WEEK 6" onclick="window.location.href=('https://drive.google.com/file/d/1Pa7_VV59c3v4UDS9QhK650geVDZhTTkm/view?usp=sharing')" /></p>  
           
             <h2  class="w3-wide w3-center"><strong>SMART BUSINESS</strong></h2>
-    
+            <p class="w3-justify">Het doel van Smart Business is om kennis te vergaren die toepasbaar zijn op organisaties. Procesoptimalisatie en het in kaart brengen van bedrijfsprocessen en businessmodellen staan hier centraal. </p>
             <h3 class="w3-wide w3-center"></h3>
             <p class="w3-justify"> Onderstaande video bevat een introductie van mezelf. Centraal staat hier wie ik ben, wat de minor inhoudt en wat mijn (verwachte) leerpunten gaan zijn.</p>
             <iframe style="margin-left:100px"width="560" height="315" src="https://www.youtube.com/embed/x-ZH3RNXhPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -121,17 +121,587 @@ body {font-family: "Lato", sans-serif}
               Daarnaast beschikt de app over een functie om een schadeclaim in te dienen die meteen wordt verwerkt door de verzekeraar.
               Tevens verschijnt er een kaart met in de buurt aangesloten en betrouwbare schadebedrijven die kunnen woren ingeschakeld.
               Gebruikers van de app kunnen worden beloond met korting op hun premie.
-              <img src="Verzekeraar2.jpg" width="100" height="80" alt="My Pic">
-            </p>
-           
+            </p>     
 
             <h2  class="w3-wide w3-center"><strong>SMART CONNECTION</strong></h2>
             <p class="w3-justify">Smart Connection stond in het teken van Web Development. In een tijdsbestek van zes weken heb ik geleerd om met HTML, CSS, Javascript, 
-              databases, API's en Machine Learning te werken. Dit portfolio is daar een resultaat van!
-            <h2  class="w3-wide w3-center"><strong>SMART TECHNOLOGY</strong></h2>
+              databases, API's en Machine Learning te werken. Dit portfolio is daar onder andere een resultaat van! Als "leek" op het gebied van technologie zie ik dit onderdeel van de minor als een ware uitdaging. De hulp die ik kreeg van mijn medestudenten was zeer welkom.
+<script language="JavaScript">
+//variables
+var Separator=";"
+var Fields=6;
+var days=new Array()                 //create array for days
+days[0]="Sun";
+days[1]="Mon";
+days[2]="Tue";
+days[3]="Wed";
+days[4]="Thu";
+days[5]="Fri";
+days[6]="Sat";
+var months=new Array()                  //create array for months
+months[0]="Jan";
+months[1]="Feb";
+months[2]="Mar";
+months[3]="Apr";
+months[4]="May";
+months[5]="Jun";
+months[6]="Jul";
+months[7]="Aug";
+months[8]="Sep";
+months[9]="Oct";
+months[10]="Nov";
+months[11]="Dec";
+var wts=new Array() //create array for cities, states, offsets, hours, minutes
+wts[1]="Abidjan;Cote d'Ivoire - CI;+;0;;"
+wts[2]="Abu Dhabi;United Arab Emirates - AE;+;4;;"
+wts[3]="Adana;Turkey - TR;+;2;;"
+wts[4]="Addis Ababa; Ethiopia - ET;+;3;;"
+wts[5]="Adelaide *;South Australia - Australia - AU;+;10;30;"
+wts[6]="Aden; South Yemen - YE;+;3;;"
+wts[7]="Aklavik;Yukon - Canada - CA;-;9;;"
+wts[8]="Aleutian;Aleutian Islands;-;10;;"
+wts[9]="Alexandria;Egypt - EG;+;2;;"
+wts[10]="Algiers;Algeria - DZ;+;0;;"
+wts[11]="Amsterdam;Netherlands - NL;+;1;;"
+wts[12]="Anadyr; Russia - RU;+;13;;"
+wts[13]="Anchorage;Alaska - USA - US;-;9;;"
+wts[14]="Ankara;Turkey - TR;+;2;;"
+wts[15]="Antananarivo; Madagascar - MG;+;3;;"
+wts[16]="Antwerp;Belgium - BE;+;0;;"
+wts[17]="Asuncion *;Paraguay - PY;-;3;;"
+wts[18]="Athens;Greece - GR;+;2;;"
+wts[19]="Atlanta;Georgia - USA - US;+;5;;"
+wts[20]="Auckland *;New Zealand - NZ;+;12;;"
+wts[21]="Aveiro;Portugal - PT;+;0;;"
+wts[22]="Baghdad;Iraq - IQ;+;3;;"
+wts[23]="Bamako;Mali - ML;+;0;;"
+wts[24]="Bandar Seri Begawan;Brunei - BN;+;8;;"
+wts[25]="Bangkok;Thailand - TH;+;7;;"
+wts[26]="Bangui;Central African Republic - CF;+;1;;"
+wts[27]="Banjul;Gambia - GM;+;1;;"
+wts[28]="Barcelona;Spain - ES;+;1;;"
+wts[29]="Barranquilla;Colombia - CO;-;5;;"
+wts[30]="Beijing;China - CN;+;8;;"
+wts[31]="Beirut;Lebanon - LB;+;2;;"
+wts[32]="Belgrade;Serbia - YU;+;1;;"
+wts[33]="Belize City;Belize - BZ;-;5;;"
+wts[34]="Berlin;Germany - DE;+;1;;"
+wts[35]="Blantyre;Malawi - MW;+;2;;"
+wts[36]="Bogota;Colombia - CO;-;5;;"
+wts[37]="Bologna;Italy - IT;+;2;;"
+wts[38]="Bombay - Mumbai;India - IN;+;6;;"
+wts[39]="Brasilia;Brazil - BR;-;3;;"
+wts[40]="Bratislava;Slovak Republic - SK;+;1;;"
+wts[41]="Brazzaville;Congo - CG;+;0;;"
+wts[42]="Bridgetown;Barbados - BB;-;4;;"
+wts[43]="Brisbane;Queensland - Australia - AU;+;10;;"
+wts[44]="Brussels;Belgium - BE;+;1;;"
+wts[45]="Bucharest;Romania - RO;+;2;;"
+wts[46]="Budapest;Hungary - HU;+;1;;"
+wts[47]="Buenos Aires;Argentina - AR;-;3;;"
+wts[48]="Bujumbura;Burundi - BI;+;2;;"
+wts[49]="Cairo;Egypt - EG;+;2;;"
+wts[50]="Calcutta;India - IN;+;6;;"
+wts[51]="Calgary;Alberta - Canada - CA;-;7;;"
+wts[52]="Cali;Colombia - CO;+;0;;"
+wts[53]="Cape Town;South Africa - ZA;+;1;;"
+wts[54]="Caracas;Venezuela - VE;-;4;;"
+wts[55]="Cebu;Philippines - PH;+;8;;"
+wts[56]="Chicago;Illinois - USA - US;-;6;;"
+wts[57]="Christchurch;New Zealand - NZ;+;12;;"
+wts[58]="Colombo;Sri Lanka - LK;+;5;30;"
+wts[59]="Conakry;Guinea - GN;+;0;;"
+wts[60]="Copenhagen;Denmark - DK;+;1;;"
+wts[61]="Cotonou;Benin - BJ;+;0;;"
+wts[62]="Dakar;Senegal - SN;+;0;;"
+wts[63]="Dallas;Texas - USA - US;-;6;;"
+wts[64]="Darwin;Northern Territory - Australia - AU;+;10;;"
+wts[65]="Delhi;India - IN;+;5;30;"
+wts[66]="Detroit;Michigan - USA - US;-;5;;"
+wts[67]="Dhaka;Bangladesh - BD;+;6;;"
+wts[68]="Djibouti;Djibouti - DJ;+;2;;"
+wts[69]="Dover;Delaware - USA - US;-;5;;"
+wts[70]="Dubai;United Arab Emirates - AE;+;3;;"
+wts[71]="Dublin;Ireland - IE;+;0;;"
+wts[72]="Dusseldorf;Germany - DE;+;1;;"
+wts[73]="Edmonton;Alberta - USA - US;-;7;;"
+wts[74]="Fairbanks;Alaska - USA - US;-;9;;"
+wts[75]="Florence;Italy - IT;+;2;;"
+wts[76]="Fort de France;Martinique - MQ;-;4;;"
+wts[77]="Frankfurt;Germany - DE;+;1;;"
+wts[78]="Freetown;Sierra Leone - SL;+;0;;"
+wts[79]="Gaborone;Botswana - BW;+;1;;"
+wts[80]="Geneva;Switzerland - CH;+;1;;"
+wts[81]="Gibraltar;Spain - ES;+;1;;"
+wts[82]="Glasgow;Scotland - GB;+;0;;"
+wts[83]="GMT;GMT - ;+;0;;"
+wts[84]="Guatemala City;Guatemala - GT;-;6;;"
+wts[85]="Guayaquil;Ecuador - EC;-;5;;"
+wts[86]="Hamilton;Bermuda - GM;-;4;;"
+wts[87]="Harare;Zimbabwe - ZW;+;2;;"
+wts[88]="Havana;Cuba - CU;-;5;;"
+wts[89]="Helsinki;Finland - FI;+;2;;"
+wts[90]="Hobart;Tasmania - Australia - AU;+;10;;"
+wts[91]="Hong Kong;Hong Kong - HK;+;8;;"
+wts[92]="Honolulu;Hawaii - US;-;10;;"
+wts[93]="Indianapolis;Indiana - USA - US;-;5;;"
+wts[94]="Ipswich;Queensland - Australia - AU;+;10;;"
+wts[95]="Islamabad;Pakistan - PK;+;5;;"
+wts[96]="Istanbul;Turkey - TR;+;2;;"
+wts[97]="Jakarta;Indonesia - ID;+;7;;"
+wts[98]="Jerusalem;Israel - IL;+;2;;"
+wts[99]="Johannesburg;South Africa - ZA;+;2;;"
+wts[100]="Kabul;Afghanistan - AF;+;5;;"
+wts[101]="Kaduna;Nigeria - NG;+;0;;"
+wts[102]="Kahira;Egypt - EG;+;2;;"
+wts[103]="Kamchatka;Russia - RU;+;11;;"
+wts[104]="Kano;Nigeria - NG;+;1;;"
+wts[105]="Karachi;Pakistan - PK;+;5;;"
+wts[106]="Kathmandu;Nepal - NP;+;6;;"
+wts[107]="Kiev;Ukraine - UA;+;3;;"
+wts[108]="Kigali;Rwanda - RW;+;1;;"
+wts[109]="Kingston;Jamaica - JM;-;5;;"
+wts[110]="Kinshasa;Zaire - ZR;+;1;;"
+wts[111]="Kobe;Japan - JP;+;9;;"
+wts[112]="Kosice;Slovak Republic - SK;+;1;;"
+wts[113]="Kuala Lumpur;Malaysia - MY;+;8;;"
+wts[114]="Kuwait City;Kuwait - KW;+;3;;"
+wts[115]="Kyoto;Japan - JP;+;9;;"
+wts[116]="La Paz;Bolivia - BO;-;5;;"
+wts[117]="Lagos;Nigeria - NG;+;1;;"
+wts[118]="Libreville;Gabon - GA;+;0;;"
+wts[119]="Lima;Peru - PE;-;5;;"
+wts[120]="Limon;Costa Rica - CR;-;5;;"
+wts[121]="Lisbon;Portugal - PT;+;0;;"
+wts[122]="Lome;Togo - TO;+;0;;"
+wts[123]="London;England - UK - GB;+;0;;"
+wts[124]="Los Angeles;California - USA - US;-;8;;"
+wts[125]="Lubumbashi;Zaire - ZR;+;1;;"
+wts[126]="Luxembourg;Luxembourg - LU;+;1;;"
+wts[127]="Madrid;Spain - ES;+;1;;"
+wts[128]="Manama;Bahrain - BH;+;3;;"
+wts[129]="Manila;Philippines - PH;+;8;;"
+wts[130]="Maracaibo;Venezuela - VE;-;5;;"
+wts[131]="Maseru;Lesotho - LS;+;2;;"
+wts[132]="Mayaguez;Puerto Rico - PR;-;4;;"
+wts[133]="Mbabane;Swaziland - SZ;+;2;;"
+wts[134]="Medan;Indonesia - ID;+;8;;"
+wts[135]="Medellin;Colombia - CO;-;5;;"
+wts[136]="Melbourne *;Victoria - Australia - AU;+;10;;"
+wts[137]="Mexico City;Mexico - MX;-;6;;"
+wts[138]="Milan;Italy - IT;+;1;;"
+wts[139]="Mogadishu;Somalia - SO;+;3;;"
+wts[140]="Mombasa;Kenya - KE;+;3;;"
+wts[141]="Monrovia;Liberia - LR;+;0;;"
+wts[142]="Monte Carlo;Monaco - MC;+;1;;"
+wts[143]="Montevideo;Uruguay - UY;-;3;;"
+wts[144]="Montreal;Quebec - Canada - CA;-;5;;"
+wts[145]="Morgantown;West Virginia - USA - US;-;5;;"
+wts[146]="Moscow;Russia - RU;+;3;;"
+wts[147]="Mumbai - Bombay;India - IN;+;5;30;"
+wts[148]="Munich;Germany - DE;+;1;;"
+wts[149]="Murmansk;Rusia - RU;+;2;;"
+wts[150]="Muscat;Oman - OM;+;3;;"
+wts[151]="N'Djamena;Chad - TD;+;0;;"
+wts[152]="Nagasaki;Japan - JP;+;9;;"
+wts[153]="Nagoya;Japan - JP;+;9;;"
+wts[154]="Nairobi;Kenia - KE;+;3;;"
+wts[155]="Naples;Italy - IT;+;1;;"
+wts[156]="Nassau;Bahamas - BS;-;5;;"
+wts[157]="New Hebrides;New Hebrides- US;+;11;;"
+wts[158]="New York City;New York - USA - US;-;5;;"
+wts[159]="Newfoundland;Newfoundland - Canada - CA;-;3;;"
+wts[160]="Niamey;Niger - NE;+;0;;"
+wts[161]="Nice;France - FR;+;1;;"
+wts[162]="Nicosia;Cyprus - CY;+;2;;"
+wts[163]="Nome;Alaska - USA - US;-;9;;"
+wts[164]="Nottingham;England - UK - GB;+;0;;"
+wts[165]="Nouakchott;Mauritania - MR;+;0;;"
+wts[166]="Nuk;Greenland - GL;-;3;30;"
+wts[167]="Odessa;Ukraine - UA;+;3;;"
+wts[168]="Oran;Algeria - DZ;+;0;;"
+wts[169]="Osaka;Japan - JP;+;9;;"
+wts[170]="Oslo;Norway - NO;+;1;;"
+wts[171]="Ottawa;Ontario - Canada - CA;-;5;;"
+wts[172]="Ouagadougou;Burkina Faso - BF;+;0;;"
+wts[173]="Oulu;Finland - FI;+;2;;"
+wts[174]="Oxford;England - UK - GB;+;0;;"
+wts[175]="Palma;Mallorca - ES;+;1;;"
+wts[176]="Panjim;Goa - India - IN;+;5;30;"
+wts[177]="Paramaribo;Suriname - SR;-;4;;"
+wts[178]="Paris;France - FR;+;1;;"
+wts[179]="Peking;China - CN;+;8;;"
+wts[180]="Perth;Western Australia - Australia - AU;+;8;;"
+wts[181]="Phoenix;Arizona - USA - US;-;7;;"
+wts[182]="Ponce;Puerto Rico - PR;-;4;;"
+wts[183]="Port Louis;Mauritius - MU;+;4;;"
+wts[184]="Port Moresby;Papua New Guinea - PG;+;10;;"
+wts[185]="Port of Spain;Trinidad and Tobago - TT;-;4;;"
+wts[186]="Prague;Czech Republic - CZ;+;1;;"
+wts[187]="Praia;Cape Verde - CV;-;2;;"
+wts[188]="Puntarenas;Costa Rica - CR;-;5;;"
+wts[189]="Quebec;Quebec - Canada - CA;-;5;;"
+wts[190]="Quito;Ecuador - EC;-;5;;"
+wts[191]="Rangoon;Barma - ;+;7;;"
+wts[192]="Reykjavik;Iceland - IS;-;1;;"
+wts[193]="Riga;Latvia - LW;+;4;;"
+wts[194]="Rio de Janeiro;Brazil - BR;-;3;;"
+wts[195]="Riyadh;Saudi Arabia - SA;+;3;;"
+wts[196]="Rome;Italy - IT;+;1;;"
+wts[197]="Saigon;Vietnam - VN;+;7;;"
+wts[198]="Saint Petersburg - Leningrad;Russia - RU;+;3;;"
+wts[199]="Salt Lake City;Utah - USA - US;-;7;;"
+wts[200]="Salzburg;Austria - AU;+;1;;"
+wts[201]="San Francisco;California - USA - US;-;8;;"
+wts[202]="San Jose;Costa Rica - CR;-;6;;"
+wts[203]="San Juan;Puerto Rico - PR;-;4;;"
+wts[204]="Santa Cruz de Tenerife;Canarias Islands - ES;+;0;;"
+wts[205]="Santiago *;Chile - CL;-;3;;"
+wts[206]="Santo Domingo;Dominican Republic - DO;-;4;;"
+wts[207]="Sao Paulo;Brazil - BR;-;3;;"
+wts[208]="Sapporo;Japan - JP;+;9;;"
+wts[209]="Sarajevo;Bosnia - BA;+;1;;"
+wts[210]="Seattle;Washington - USA - US;-;8;;"
+wts[211]="Seoul;South Korea - KR;+;8;;"
+wts[212]="Shanghai;China - CN;+;8;;"
+wts[213]="Singapore;Singapore - SG;+;8;;"
+wts[214]="Sofia;Bulgaria - BG;+;2;;"
+wts[215]="Stockholm;Sweden - SE;+;1;;"
+wts[216]="Stuttgart;Germany - DE;+;1;;"
+wts[217]="Surabaya;Indonesia - ID;+;7;;"
+wts[218]="Suva;Fiji Islands - FJ;+;12;;"
+wts[219]="Sydney *;New South Wales - Australia - AU;+;11;;"
+wts[220]="Taipei;Thaiwan - TH;+;8;;"
+wts[221]="Tallinn;Estonia - EE;+;2;;"
+wts[222]="Tampere;Finland - FI;+;2;;"
+wts[223]="Tashkent;Uzbekistan - UZ;+;3;;"
+wts[224]="Tegucigalpa;Honduras - HN;-;5;;"
+wts[225]="Tehran;Iran - IR;+;4;;"
+wts[226]="Tel Aviv;Israel - IL;+;2;;"
+wts[227]="Tokyo;Japan - JP;+;9;;"
+wts[228]="Toronto;Ontario - Canaa - CA;-;5;;"
+wts[229]="Tripoli;Libya - LY;+;1;;"
+wts[230]="Tunis;Tunisia - TN;+;1;;"
+wts[231]="Turin;Italy - IT;+;1;;"
+wts[232]="Ulanbatar;Mongolia - MN;+;8;;"
+wts[233]="Valletta;Malta - MT;+;1;;"
+wts[234]="Vancouver;British Columbia - Canada - CA;-;8;;"
+wts[235]="Vatican;Vatican City - VA;+;1;;"
+wts[236]="Venice;Italy - IT;+;1;;"
+wts[237]="Victoria Falls;Zimbabwe - ZW;+;2;;"
+wts[238]="Vienna;Austria - AT;+;1;;"
+wts[239]="Vientiane;Laos - LA;+;7;;"
+wts[240]="Vladimir;Russia - RU;+;3;;"
+wts[241]="Vladivostok;Russia - RU;+;10;;"
+wts[242]="Warsaw;Poland - PL;+;1;;"
+wts[243]="Washington DC;Washington - USA - US;-;5;;"
+wts[244]="Wellington *;New Zealand - NZ;+;12;;"
+wts[245]="Winnipeg;Manitoba - Canada - CA;-;6;;"
+wts[246]="Yalta;Ukraine - UA;+;3;;"
+wts[247]="Zagreb;Croatia - HR;+;1;;"
+wts[248]="Zaragoza;Spain - ES;+;1;;"
+wts[249]="Zurich;Switzerland - CH;+;1;;"
+var ST=null;
+var constanta=3600000;
+var GMTClockID=null;
+var GMTClockRunning=false;
+var TSCClockID=null;
+var TSCClockRunning=false;
+var GMT="";
+
+function SystemClock()
+{         //simple clock for current system time
+  var curDate=new Date();
+  var x=curDate;
+  var y=x.getDate();    
+  (y<10) ? y="0"+y : y
+  var z=x.getFullYear();    
+  z=""+z;
+  var hs=x.getHours();  
+  (hs<10) ? hs="0"+hs : hs
+  var ms=x.getMinutes();
+  (ms<10) ? ms="0"+ms : ms
+  var ss=x.getSeconds();
+  (ss<10) ? ss="0"+ss : ss
+  ST=days[x.getDay()]+", "+y+" "+months[x.getMonth()]+" "+z+" "+hs+":"+ms+":"+ss;
+  document.getElementById("digits").value=ST+" "+"YST";
+  id=setTimeout("SystemClock()",1000)          //displays system time
+}
+
+function GMTClock()                //displays selected different time
+{
+  var a3;
+  var a1 = new Date();
+  if(offset == "+")
+  {
+    a3 = new Date(a1.getTime() - addhm);
+  }
+  else
+  {
+    a3 = new Date(a1.getTime() + addhm);
+  }    
+
+  GMT = days[a3.getDay()] 
+        + ", " 
+        + a3.getDate()
+        + " " 
+        + months[a3.getMonth()] 
+        + " " 
+        + a3.getFullYear() 
+        + " " 
+        + a3.getHours() 
+        + ":" 
+        + a3.getMinutes() 
+        + ":" 
+        + a3.getSeconds() 
+        + " GMT";
+  document.getElementById("digits1").value = GMT;    //displays selected time minus your time zone offset from OS
+  stopGMTClock(); 
+  GMTClockID = setTimeout("GMTClock()", 1000); 
+  GMTClockRunning = true;
+}
+
+function where1(si)
+{                        //read option selected
+  if(si != 0)
+  {
+    offset=GetField(wts[si],3);      //realy offset to GMT from array wts
+    addh=GetField(wts[si],4);
+    if(GetField(wts[si],5) != "")
+    {       //if find minutes in array wts converts minutes to millisecs
+          addm=(GetField(wts[si],5)/60);
+    }
+    else
+    {
+      addm=0;
+    }
+    addhm=(constanta*addh)+(constanta*addm);
+    stopTSCClock(); 
+    document.getElementById("digits2").value=""; 
+    GMTClock();
+  }
+  else
+  {
+    stopGMTClock();     
+    document.getElementById("digits1").value="";
+    stopTSCClock(); 
+    document.getElementById("digits2").value="";
+  }
+}
+
+function TSCClock()
+{              //displays selected different time
+  var a11=new Date(GMT);
+  var a33;
+  if(offset1 == "+")
+  {
+    a33 = new Date(a11.getTime() + addhm1);
+  }
+  else
+  {
+    a33 = new Date(a11.getTime() - addhm1);
+  }
+  
+  
+  TSC = days[a33.getDay()] 
+        + ", " 
+        + a33.getDate() 
+        + " " 
+        + months[a33.getMonth()] 
+        + " " 
+        + a33.getFullYear() 
+        + " " 
+        + a33.getHours() 
+        + ":" 
+        + a33.getMinutes() 
+        + ":" 
+        + a33.getSeconds() 
+        + " TSC";
+  
+  document.getElementById("digits2").value = TSC;      //displays selected time minus your time zone offset from OS
+  stopTSCClock(); 
+  TSCClockID = setTimeout("TSCClock()", 1000); 
+  TSCClockRunning = true;
+}
+
+function where2(si)
+{                          //read option selected
+  if(si !=0 && GMT !="")
+  {
+    offset1=GetField(wts[si],3);      //realy offset to GMT from array wts
+    addh1=GetField(wts[si],4);
+    if(GetField(wts[si],5) != "")
+    {       //if find minutes in array wts converts minutes to milisecs
+          addm1=(GetField(wts[si],5)/60);
+    }
+    else
+    {
+      addm1=0;
+    }
+    addhm1=(constanta*addh1)+(constanta*addm1);
+    TSCClock();
+  }
+  else
+  {
+    stopTSCClock();
+    document.getElementById("digits2").value="";
+    alert("Where are you from ???");
+    document.getElementById("c2").options[0].selected=true;
+    document.getElementById("c1").focus();
+  }
+}
+
+function stopGMTClock()
+{                            //stops GMT time
+  if(GMTClockRunning)
+    clearTimeout(GMTClockID); 
+
+  GMTClockRunning=false;
+}
+
+function stopTSCClock()
+{                           //stops Any time
+  if (TSCClockRunning) 
+      clearTimeout(TSCClockID); 
+      
+  TSCClockRunning=false;
+}
+
+function GetField(Entry,number)
+{             //read fields from array wts
+  var Out="";
+  var FirstChar;
+  var LastChar;
+  FirstChar=0;
+  LastChar=Entry.indexOf(Separator);
+  if(number==1)
+  {
+    Out+=Entry.substring(FirstChar,LastChar);
+    return Out;
+  }
+  if(number==Fields)
+  {
+    Out+=Entry.substring(Entry.lastIndexOf(Separator)+1,Entry.length);
+    return Out;
+  }
+  for(var i=2;i<=number;i++)
+  {
+     FirstChar=LastChar+1;
+     LastChar=Entry.indexOf(Separator, FirstChar);
+  }
+  Out+=Entry.substring(FirstChar,LastChar);
+  return Out;
+}
+
+function writecities(str,n)
+{            //writes options from array wts
+  if(n=="c1")
+  {
+    document.writeln('<SELECT id="c1" NAME="c1" onChange="where1(selectedIndex)">');
+  }
+  if(n=="c2")
+  {
+    document.writeln('<SELECT id="c2" NAME="c2" onChange="where2(selectedIndex)">');
+  }
+  document.writeln("<OPTION VALUE='0'>"+str);
+  for(var s=1;s<wts.length;s++)
+  {
+    document.write("<OPTION VALUE='"+s+"'>"+GetField(wts[s],1)+" - "+GetField(wts[s],2));
+  }
+  document.writeln("</SELECT>");
+}
+//-->
+</script>
+<p><b>Dit JavaScript laat de huidige systeemtijd (op je desktop) zien, Greenwich Mean Time (GMT), en tijd en datum van een stad naar keuze.</b></p>
+<form name="clockForm">
+    <div align="center"><center><table border="5" cellpadding="2" cellspacing="10" bordercolor="#008080">
+<tr>
+<td align="center" colspan="2" bgcolor="#C0C0C0"><font color="#000000" size="6" face="Arial, Helvetica"><b>WERELDKLOK</b></font></td>
+        </tr>
+        <tr>
+<td align="right" bgcolor="#C0C0C0"><font color="#000000" face="Arial, Helvetica"><b>Systeem-tijd:</b></font></td>
+            <td><input type="text" size="32" id="digits" name="digits"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" bgcolor="#C0C0C0"><script language="JavaScript">
+<!--
+var str="Bij welke stad ben je in de buurt?";
+var n="c1";
+writecities(str,n);
+document.getElementById("c1").focus();
+//-->
+</script></td>
+        </tr>
+        <tr>
+        <td align="right" bgcolor="#C0C0C0">
+<font color="#000000" face="Arial, Helvetica"><b>Greenwich Mean Time:</b></font></td>
+            <td><input type="text" size="32" id="digits1" name="digits1"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" bgcolor="#C0C0C0"><script language="JavaScript">
+<!--
+var str="Selecteer een stad naar keuze.";
+var n="c2";
+writecities(str,n);
+//-->
+</script></td>
+        </tr>
+        <tr>
+  <td align="right" bgcolor="#C0C0C0"><font color="#000000" face="Arial, Helvetica"><b>Tijd van geselecteerde stad:</b></font></td>
+ <td><input type="text" size="32" id="digits2" name="digits2"></td>
+        </tr>
+    </table>
+    </center></div>
+</form>
+
+<p class="w3-justify"><b>Onderstaande tool telt twee getallen bij elkaar op. Deze tool is gemaakt door middel van Javascript. Er wordt gebruik gemaakt van een X en Y variabele.</b></p>
+<p class="w3-justify" style="margin-left:200px">
+  <input id="x">
+  <input id="y">
+  <button id="go">+</button>
+  
+  <div id="result"></div>
+  
+  <script >
+    "use strict";
+
+function add() {
+    var x = Number(document.getElementById('x').value);
+    var y = Number(document.getElementById('y').value);
+
+    document.getElementById('result').innerHTML = x+y;
+    return false;
+}
+
+document.getElementById('go').addEventListener('click', add);
+  </script>
+</p>
+
+<p class="w3-justify"><b>Onderstaande tool laat de huidige tijd en datum .</b></p>
+
+<button type="button" style="margin-left:200px"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Klik hier voor de huidige tijd en datum</button>
+
+<p id="demo"></p>
+
+<p class="w3-justify"><b>Hieronder kan de huidige weersomstandigheid voor mijn woonplaats, Venray, worden afgelezen.</b></p>
+<script src="https://www.yr.no/place/Netherlands/Limburg/Venray/external_box_stripe.js"></script><noscript>
+<a href="https://www.yr.no/place/Netherlands/Limburg/Venray/"></a></noscript>
+
+
+
+            <h2  style="margin-top:100px"class="w3-wide w3-center"><strong>SMART TECHNOLOGY</strong></h2>
             <p class="w3-justify">In het kader van The Internet of Things heb ik een IOT-schakeling gebouwd. Deze schakeling zorgt voor het automatiseren van de lichtintensiteit
-              en aarde-vochtigheid van een plant. Na het ontwerpen van de IOT-schakeling heb ik een Printed Circuit Board (PCB) ontworpen. Vervolgens heb ik hier een 3D-chassis voor ontworpen.
-             <p>Hieronder vind je een sfeerimpressie van afgelopen weken. In deze impressie komen onderwerpen van Smart Start, Smart Business, Smart Technology en Smart Connection voorbij.</p> 
+              en aarde-vochtigheid van een plant. Allereerst heb ik een IOT-schakeling ontworpen. Hierbij lag de focus vooral op het programmeren en monteren van de Arduino. Als Finance & Control student had ik dit aardig snel onder de knie. Na het ontwerpen van de (werkende) Arduino kon ik aan de slag met het ontwerpen van een PCB.
+              Met behulp van AutoCAD Eagle heb ik schematisch de opzet overgenomen. Na het ontwerpen van een schematische opzet heb ik een daadwerkelijk PCB gerealiseerd, wat vervolgens in China is geproduceerd. </p>
+            
+            <p class="w3-justify">Na het ontwerpen van de PCB stond het modelleren van een behuizing centraal. Het modelleren van de behuizing heb ik gedaan door middel van het programma SolidWorks. Met behulp van mijn medestudenten is het uiteindelijk gelukt om een behuizing te modelleren
+              waar, naast plek voor de PCB, tevens plaats was voor een voeding en een relais.</p>
+
+            <p class="w3-justify">Na het modelleren van de behuizing heb ik, na het volgen van een snelcursus solderen, de benodigde componenten gesoldeerd aan mijn PCB.</p>  
+              
+              <p style="margin-top:100px"class="w3-justify">Hieronder vind je een sfeerimpressie van afgelopen weken. In deze impressie komen onderwerpen van Smart Start, Smart Business, Smart Technology en Smart Connection voorbij.</p> 
             </p>
              <!-- Automatic Slideshow  -->
             <div class="w3-black">
@@ -204,14 +774,22 @@ body {font-family: "Lato", sans-serif}
                             </div>
 
            <h3 style="margin-top:80px"class="w3-wide w3-center">Bedrijfsbezoeken & workshops</h3>
-           <H1 class="w3-justify">NOG IN TE VULLEN:</H1>
-            <H1 class="w3-justify">ATAG</H1>
-            <H1 class="w3-justify">KOOKCOLLEGE</H1>
-            <H1 class="w3-justify">ELK</H1>
-            <H1 class="w3-justify">OCEANZ</H1>
-            <H1 class="w3-justify">MASTER YOUR MIND & OWN YOUR LIFE - ONER ACADEMY</H1>
-            <H1 class="w3-justify">PAUL KALIS</H1>
+           <h2  class="w3-wide w3-center"><strong>ATAG</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>NXP NIJMEGEN</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>KOOK COLLEGE</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>ELK</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>OCEANZ</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>MASTER YOUR MIND & OWN YOUR LIFE - ONER ACADEMY</strong></h2>
+
+           <h2  class="w3-wide w3-center"><strong>PAUL KALIS</strong></h2>
+           
         </div>
+
         
     
     </div>
@@ -327,7 +905,8 @@ body {font-family: "Lato", sans-serif}
 
 
 <header class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-   <h5>Website designed and created by Jeromme Boot. All rights reserved. © 2019 </h5>
+   <h5>Website designed and created by Jeromme Boot. All rights reserved. © 2020 </h5>
+   <h5><a href="https://creativecommons.org/licenses/by/4.0/">This work is licensed under a Creative Commons Attribution 4.0 International License </a></h5>
   </header>
 
 <script>
@@ -360,5 +939,17 @@ function myFunction() {
 
 </script>
 
+<script type="text/JavaScript">
+  //Script courtesy of BoogieJack.com
+  var message="NoRightClicking";
+  function defeatIE() {if (document.all) {(message);return false;}}
+  function defeatNS(e) {if 
+  (document.layers||(document.getElementById&&!document.all)) {
+  if (e.which==2||e.which==3) {(message);return false;}}}
+  if (document.layers) 
+  {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;}
+  else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;}
+  document.oncontextmenu=new Function("return false")
+  </script>
 </body>
 </html>
