@@ -685,10 +685,56 @@ Klik hier voor de huidige tijd en datum</button>
 
 <p id="demo"></p>
 
-<p class="w3-justify"><b>Hieronder kan de huidige weersomstandigheid voor mijn woonplaats, Venray, worden afgelezen.</b></p>
-<script  src="https://www.yr.no/place/Netherlands/Limburg/Venray/external_box_stripe.js"></script><noscript>
-<a href="https://www.yr.no/place/Netherlands/Limburg/Venray/"></a></noscript>
+<p class="w3-justify"><b>Hieronder kan de huidige weersomstandigheid voor Nijmegen worden afgelezen.</b></p>
+<body>
+  <div id="weather">
+    <div id="description"></div>
+    <h1 id="temp"></h1>
+    <div id="location"></div>
+  </div>
+  <script lang="text/javascript">
+    function weatherBalloon( cityID ) {
+  var key = '6b5be2a35980ae2854f84218aac80ce9';
+  fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+  .then(function(resp) { return resp.json() }) // Convert data to json
+  .then(function(data) {
+    drawWeather(data);
+  })
+  .catch(function() {
+    // catch any errors
+  });
+}
 
+window.onload = function() {
+  weatherBalloon( 2750053 );
+}
+function drawWeather( d ) {
+	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+	
+	document.getElementById('description').innerHTML = d.weather[0].description;
+	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('location').innerHTML = d.name;
+}
+function drawWeather( d ) {
+	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+	var description = d.weather[0].description;
+	
+	document.getElementById('description').innerHTML = description;
+	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('location').innerHTML = d.name;
+	
+	if( description.indexOf('rain') > 0 ) {
+  	document.body.className = 'rainy';
+  } else if( description.indexOf('cloud') > 0 ) {
+  	document.body.className = 'cloudy';
+  } else if( description.indexOf('sunny') > 0 ) {
+  	document.body.className = 'sunny';
+  }
+}
+  </script>
+</bod style="margin-left:100px">
 
 
             <h2  style="margin-top:100px"class="w3-wide w3-center"><strong>SMART TECHNOLOGY</strong></h2>
@@ -987,17 +1033,6 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000);    
 }
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
 
 </script>
 
